@@ -7,7 +7,7 @@
     tools:context=".MainActivity">
 
     <AutoCompleteTextView
-        android:id="@+id/etSearch"
+        android:id="@+id/autoCompleteTVSearch"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="50dp"
@@ -25,7 +25,7 @@
         android:text="@string/enter_the_first_digits_of_a_card_number_bin_iin"
         android:textColor="@color/black"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etSearch" />
+        app:layout_constraintTop_toBottomOf="@+id/autoCompleteTVSearch" />
 
     <ProgressBar
         android:id="@+id/progressBar"
@@ -47,7 +47,7 @@
         android:layout_marginTop="30dp"
         android:contentDescription="@string/button_search"
         android:src="@drawable/ic_search_24"
-        app:layout_constraintStart_toEndOf="@+id/etSearch"
+        app:layout_constraintStart_toEndOf="@+id/autoCompleteTVSearch"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
@@ -69,11 +69,11 @@
         android:layout_marginHorizontal="10dp"
         android:orientation="horizontal"
         android:weightSum="3"
-        android:visibility="visible"
+        android:visibility="gone"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etSearch"
+        app:layout_constraintTop_toBottomOf="@+id/autoCompleteTVSearch"
         app:layout_constraintTop_toTopOf="parent">
 
         <androidx.appcompat.widget.LinearLayoutCompat
@@ -216,7 +216,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/mt_5dp"
                 android:text=" ?"
-                android:textColor="@color/black"
+                android:textColor="@color/blu"
                 android:textSize="14sp" />
 
             <TextView
@@ -286,7 +286,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/mt_5dp"
                 android:layout_weight="1"
-                android:textColor="@color/black"
+                android:textColor="@color/blu"
                 android:textSize="12sp"
                 android:text=" ?" />
 
@@ -296,7 +296,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/mt_5dp"
                 android:layout_weight="1"
-                android:textColor="@color/black"
+                android:textColor="@color/blu"
                 android:textSize="12sp"
                 android:text=" ?" />
         </androidx.appcompat.widget.LinearLayoutCompat>
