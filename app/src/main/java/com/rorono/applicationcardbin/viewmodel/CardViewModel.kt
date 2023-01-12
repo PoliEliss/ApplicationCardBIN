@@ -3,6 +3,7 @@ package com.rorono.applicationcardbin.viewmodel
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.viewModelScope
+import com.rorono.applicationcardbin.models.localmodels.CardBINItem
 import com.rorono.applicationcardbin.models.removemodels.CardInfo
 import com.rorono.applicationcardbin.repository.NetworkRepository
 import com.rorono.applicationcardbin.repository.RepositoryDataBase
@@ -20,6 +21,10 @@ class CardViewModel(
     val cardInfo: LiveData<CardInfo>
         get() = _cardInfo
 
+    private val _cardBINList = MutableLiveData<ArrayList<String>>()
+    val cardBINList: LiveData<ArrayList<String>>
+        get() = _cardBINList
+
     fun getCardInfo(bin: String) {
         viewModelScope.launch {
             withContext(Dispatchers.IO) {
@@ -33,6 +38,9 @@ class CardViewModel(
                         is Result.Success -> {
                             _cardInfo.value = response.cardInfo
                             state.postValue(response.cardInfo?.let { InfoCardState.Success(it) })
+                            val cardBINItem = CardBINItem(bin)
+                            dataBase.insertCardBIN(cardBINItem = cardBINItem)
+                            getCardBINListDataBase()
                         }
                     }
                 }
@@ -41,4 +49,17 @@ class CardViewModel(
     }
 
 
+    fun getCardBINListDataBase(): ArrayList<String> {
+        val listCardBIN = arrayListOf<String>()
+        viewModelScope.launch {
+            withContext(Dispatchers.IO) {
+                val list = dataBase.getAllCardBIN()
+                for (i in list) {
+                    listCardBIN.add(i.cardBIN)
+                }
+                _cardBINList.postValue(listCardBIN)
+            }
+        }
+        return listCardBIN
+    }
 }
