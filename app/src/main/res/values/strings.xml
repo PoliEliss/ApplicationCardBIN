@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">ApplicationCardBIN</string>
+    <string name="enter_a_card_number_bin_iin">enter a card number (BIN/IIN)</string>
+    <string name="enter_the_first_digits_of_a_card_number_bin_iin">Enter the first digits of a card number (BIN/IIN)</string>
+    <string name="button_search">Button search</string>
+    <string name="scheme_network">SCHEME/NETWORK</string>
+    <string name="luhn">LUHN</string>
+    <string name="latitude">latitude</string>
+    <string name="longitude">longitude</string>
 </resources>
