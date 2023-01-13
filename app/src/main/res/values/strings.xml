@@ -7,4 +7,14 @@
     <string name="luhn">LUHN</string>
     <string name="latitude">latitude</string>
     <string name="longitude">longitude</string>
+    <string name="no">No</string>
+    <string name="yes">Yes</string>
+    <string name="brand">BRAND</string>
+    <string name="card_number">CARD NUMBER</string>
+    <string name="length">Length</string>
+    <string name="unknown_data">\?</string>
+    <string name="bank">BANK</string>
+    <string name="type">TYPE</string>
+    <string name="country">COUNTRY</string>
+    <string name="prepaid">PREPAID</string>
 </resources>
