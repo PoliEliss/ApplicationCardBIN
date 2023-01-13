@@ -2,4 +2,11 @@
 <resources>
     <dimen name="mt_10_dp">10dp</dimen>
     <dimen name="mt_5dp">5dp</dimen>
+    <dimen name="margin_top_20">20dp</dimen>
+    <dimen name="text_size_12">12sp</dimen>
+    <dimen name="margin_start_10">10dp</dimen>
+    <dimen name="margin_top_30">30dp</dimen>
+    <dimen name="margin_horizontal_10">10dp</dimen>
+    <dimen name="margin_top_25">25dp</dimen>
+    <dimen name="text_size_14">14sp</dimen>
 </resources>
