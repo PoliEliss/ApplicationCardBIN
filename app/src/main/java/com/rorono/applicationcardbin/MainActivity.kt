@@ -73,15 +73,25 @@ class MainActivity : AppCompatActivity() {
                                 tvBankNumber.text = it.bank?.phone
                                 tvBrand.text = it.brand
                                 if (it.prepaid == false) {
-                                    tvPrepaid.text = "No"
+                                    tvPrepaid.text =
+                                        getString(com.rorono.applicationcardbin.R.string.no)
                                 } else {
-                                    tvPrepaid.text = "Yes"
+                                    tvPrepaid.text =
+                                        getString(com.rorono.applicationcardbin.R.string.yes)
                                 }
                                 tvLength.text = it.number?.length.toString()
                                 if (it.number?.luhn == false) {
-                                    tvLuhn.text = getString(com.rorono.applicationcardbin.R.string.luhn)+ "No"
+                                    val lunchNo =
+                                        getString(com.rorono.applicationcardbin.R.string.luhn) + getString(
+                                            com.rorono.applicationcardbin.R.string.no
+                                        )
+                                    tvLuhn.text = lunchNo
                                 } else {
-                                    tvLuhn.text = getString(com.rorono.applicationcardbin.R.string.luhn) + "Yes"
+                                    val lunchYes =
+                                        getString(com.rorono.applicationcardbin.R.string.luhn) + getString(
+                                            com.rorono.applicationcardbin.R.string.yes
+                                        )
+                                    tvLuhn.text = lunchYes
                                 }
                                 tvCountryEmoji.text = it.country?.emoji
                                 tvCountry.text = it.country?.name
@@ -118,15 +128,12 @@ class MainActivity : AppCompatActivity() {
                     binding.tvError.visibility = View.VISIBLE
                     binding.tvError.text = state.messageError
                     binding.progressBar.visibility = View.GONE
-                    Log.d("TEST", "Провал")
                 }
-
             }
         }
-
-
     }
 }
+
 private fun openGoogleMap(latitude: Double, longitude: Double, context: Context) {
     val uri = Uri.parse("geo:$latitude,$longitude?z=15")
     val mapIntent = Intent()
@@ -138,8 +145,6 @@ private fun openGoogleMap(latitude: Double, longitude: Double, context: Context)
     try {
         context.startActivity(mapIntent)
     } catch (e: ActivityNotFoundException) {
-
-        //if map app isn't resolved/installed catch error
         e.printStackTrace()
     }
 }
