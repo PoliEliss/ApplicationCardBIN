@@ -5,7 +5,7 @@ import com.rorono.applicationcardbin.models.localmodels.CardBINItem
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
 
-class RepositoryDataBase(private val dataBase: CardBINDataBase) {
+class RepositoryDataBase(dataBase: CardBINDataBase) {
     private val cardBinDao = dataBase.cardBINDao()
 
     suspend fun insertCardBIN(cardBINItem: CardBINItem) {
