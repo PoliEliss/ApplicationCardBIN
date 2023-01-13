@@ -6,6 +6,7 @@ import androidx.lifecycle.viewmodel.CreationExtras
 import com.rorono.applicationcardbin.repository.NetworkRepository
 import com.rorono.applicationcardbin.repository.RepositoryDataBase
 
+@Suppress("UNCHECKED_CAST")
 class CardViewModelFactory(
     private val networkRepository: NetworkRepository,
     private val dataBase: RepositoryDataBase
