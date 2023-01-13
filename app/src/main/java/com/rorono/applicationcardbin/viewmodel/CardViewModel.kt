@@ -33,7 +33,7 @@ class CardViewModel(
                 withContext(Dispatchers.Main) {
                     when (response) {
                         is Result.Error -> state.postValue(
-                            InfoCardState.Error("Ошибка! Не удалось получить данные. Проверьте правильность введенных данных или попробуйте ввести более 4х символов")
+                            InfoCardState.Error("Ошибка! Не удалось получить данные. Проверьте Интернет соединение. Проверьте правильность введенных данных или попробуйте ввести более 4х символов")
                         )
                         is Result.Success -> {
                             _cardInfo.value = response.cardInfo
