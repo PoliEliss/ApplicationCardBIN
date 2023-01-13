@@ -11,7 +11,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="50dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="@dimen/margin_top_20"
         android:hint="@string/enter_a_card_number_bin_iin"
         android:inputType="number"
         app:layout_constraintStart_toStartOf="parent"
@@ -43,8 +43,8 @@
         android:id="@+id/ivSearch"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="30dp"
+        android:layout_marginStart="@dimen/margin_start_10"
+        android:layout_marginTop="@dimen/margin_top_30"
         android:contentDescription="@string/button_search"
         android:src="@drawable/ic_search_24"
         app:layout_constraintStart_toEndOf="@+id/autoCompleteTVSearch"
@@ -66,7 +66,7 @@
         android:id="@+id/llCardInfo"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginHorizontal="10dp"
+        android:layout_marginHorizontal="@dimen/margin_horizontal_10"
         android:orientation="horizontal"
         android:weightSum="3"
         android:visibility="gone"
@@ -88,7 +88,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="@string/scheme_network"
-                android:textSize="12sp"
+                android:textSize="@dimen/text_size_12"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/etSearch" />
 
@@ -99,16 +99,15 @@
                 android:layout_marginTop="@dimen/mt_5dp"
                 android:layout_weight="1"
                 android:textColor="@color/black"
-                android:textSize="12sp"
+                android:textSize="@dimen/text_size_12"
                 tools:text="Visa " />
-
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="25dp"
-                android:text="BRAND"
-                android:textSize="12sp" />
+                android:layout_marginTop="@dimen/margin_top_25"
+                android:text="@string/brand"
+                android:textSize="@dimen/text_size_12" />
 
             <TextView
                 android:id="@+id/tvBrand"
@@ -117,31 +116,31 @@
                 android:layout_marginTop="@dimen/mt_5dp"
                 android:layout_weight="1"
                 android:textColor="@color/black"
-                android:textSize="12sp"
-                tools:text="Visa/Dankort" />
+                android:textSize="@dimen/text_size_12"
+                 />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="25dp"
-                android:text="CARD NUMBER"
-                android:textSize="12sp" />
+                android:layout_marginTop="@dimen/margin_top_25"
+                android:text="@string/card_number"
+                android:textSize="@dimen/text_size_12" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/mt_5dp"
-                android:text="Length"
+                android:text="@string/length"
                 android:textColor="@color/black"
-                android:textSize="14sp" />
+                android:textSize="@dimen/text_size_14" />
 
             <TextView
                 android:id="@+id/tvLength"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="5dp"
+                android:layout_marginTop="@dimen/mt_5dp"
                 android:textColor="@color/black"
-                android:textSize="14sp"
+                android:textSize="@dimen/text_size_14"
                 tools:text="16" />
 
             <TextView
@@ -151,7 +150,7 @@
                 android:layout_marginTop="@dimen/mt_5dp"
                 android:text="@string/luhn"
                 android:textColor="@color/black"
-                android:textSize="14sp" />
+                android:textSize="@dimen/text_size_14" />
         </androidx.appcompat.widget.LinearLayoutCompat>
 
         <androidx.appcompat.widget.LinearLayoutCompat
@@ -165,8 +164,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="TYPE"
-                android:textSize="12sp" />
+                android:text="@string/type"
+                android:textSize="@dimen/text_size_12" />
 
             <TextView
                 android:id="@+id/tvType"
@@ -175,15 +174,15 @@
                 android:layout_marginTop="@dimen/mt_5dp"
                 android:layout_weight="1"
                 android:textColor="@color/black"
-                android:textSize="12sp"
+                android:textSize="@dimen/text_size_12"
                 tools:text="Debit/Credit " />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="25dp"
-                android:text="PREPAID"
-                android:textSize="12sp" />
+                android:text="@string/prepaid"
+                android:textSize="@dimen/text_size_12" />
 
             <TextView
                 android:id="@+id/tvPrepaid"
@@ -191,16 +190,16 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/mt_5dp"
                 android:textColor="@color/black"
-                android:textSize="12sp"
+                android:textSize="@dimen/text_size_12"
                 tools:text="Yes/No" />
 
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="25dp"
-                android:text="COUNTRY"
-                android:textSize="12sp" />
+                android:layout_marginTop="@dimen/margin_top_25"
+                android:text="@string/country"
+                android:textSize="@dimen/text_size_12" />
 
             <TextView
                 android:id="@+id/tvCountryEmoji"
@@ -208,16 +207,16 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/mt_5dp"
                 android:textColor="@color/black"
-                android:textSize="14sp" />
+                android:textSize="@dimen/text_size_14" />
 
             <TextView
                 android:id="@+id/tvCountry"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/mt_5dp"
-                android:text=" ?"
+                android:text="@string/unknown_data"
                 android:textColor="@color/blu"
-                android:textSize="14sp" />
+                android:textSize="@dimen/text_size_14" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -225,33 +224,33 @@
                 android:layout_marginTop="@dimen/mt_10_dp"
                 android:text="@string/latitude"
                 android:textColor="@color/black"
-                android:textSize="14sp" />
+                android:textSize="@dimen/text_size_14" />
 
             <TextView
                 android:id="@+id/tvLatitude"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/mt_5dp"
-                android:text=" ?"
+                android:text="@string/unknown_data"
                 android:textColor="@color/black"
-                android:textSize="14sp" />
+                android:textSize="@dimen/text_size_14" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="5dp"
+                android:layout_marginTop="@dimen/mt_5dp"
                 android:text="@string/longitude"
                 android:textColor="@color/black"
-                android:textSize="14sp" />
+                android:textSize="@dimen/text_size_14" />
 
             <TextView
                 android:id="@+id/tvLongitude"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="5dp"
-                android:text=" ?"
+                android:layout_marginTop="@dimen/mt_5dp"
+                android:text="@string/unknown_data"
                 android:textColor="@color/black"
-                android:textSize="14sp" />
+                android:textSize="@dimen/text_size_14" />
 
         </androidx.appcompat.widget.LinearLayoutCompat>
 
@@ -265,8 +264,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="BANK"
-                android:textSize="12sp"
+                android:text="@string/bank"
+                android:textSize="@dimen/text_size_12"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/etSearch" />
 
@@ -277,8 +276,8 @@
                 android:layout_marginTop="@dimen/mt_5dp"
                 android:layout_weight="1"
                 android:textColor="@color/black"
-                android:textSize="12sp"
-                android:text=" ?" />
+                android:textSize="@dimen/text_size_12"
+                android:text="@string/unknown_data" />
 
             <TextView
                 android:id="@+id/tvBankURL"
@@ -287,8 +286,8 @@
                 android:layout_marginTop="@dimen/mt_5dp"
                 android:layout_weight="1"
                 android:textColor="@color/blu"
-                android:textSize="12sp"
-                android:text=" ?" />
+                android:textSize="@dimen/text_size_12"
+                android:text="@string/unknown_data" />
 
             <TextView
                 android:id="@+id/tvBankNumber"
@@ -297,8 +296,8 @@
                 android:layout_marginTop="@dimen/mt_5dp"
                 android:layout_weight="1"
                 android:textColor="@color/blu"
-                android:textSize="12sp"
-                android:text=" ?" />
+                android:textSize="@dimen/text_size_12"
+                android:text="@string/unknown_data" />
         </androidx.appcompat.widget.LinearLayoutCompat>
 
     </androidx.appcompat.widget.LinearLayoutCompat>
